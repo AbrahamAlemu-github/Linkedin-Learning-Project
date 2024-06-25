@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Java Course</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <div>
+            <img src="linkedin-src.png" alt="LinkedIn Logo">
+        </div>
+        <div>
+            <a href="{{ url_for('myprofile') }}" class="btn btn-light mr-2">My Profile</a>
+            <a href="{{ url_for('home') }}" class="btn btn-light">Sign Out</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="video-section">
+            <h3>Learning Java 11</h3>
+            <video controls width="100%">
+                <source src="video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p>Duration: 2h 36m</p>
+        </div>
+        <div class="code-section">
+            <h4>Coding Challenge: Write a Basic Java Program</h4>
+            <textarea id="code-input" class="form-control" rows="10" placeholder="Enter your Java code here"></textarea>
+            <button class="btn btn-primary mt-3" onclick="checkCode()">Submit</button>
+            <p id="feedback" class="mt-3"></p>
+        </div>
+        <a href="{{ url_for('page1') }}" class="btn btn-secondary btn-back">Back to Home</a>
+        <a href="{{ url_for('part2') }}" class="btn btn-secondary btn-back">Next Course</a>
+    </div>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

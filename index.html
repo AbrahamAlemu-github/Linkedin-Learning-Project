@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Learning Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .login-container img {
+            height: 40px;
+            margin-bottom: 20px;
+        }
+        .form-control {
+            margin-bottom: 15px;
+        }
+        .btn-primary {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn Logo">
+        <h2>Sign in</h2>
+        <p>Stay updated on your professional world</p>
+        <input type="text" id="username" class="form-control" placeholder="Email or Phone">
+        <input type="password" id="password" class="form-control" placeholder="Password">
+        <button class="btn btn-primary" onclick="validateLogin()">Sign in</button>
+        <p class="mt-3"><a href="#">Forgot password?</a></p>
+        <p class="mt-2">or</p>
+        <button class="btn btn-light border" onclick="alert('Google Sign-In')">Continue with Google</button>
+        <button class="btn btn-light border mt-2" onclick="alert('Apple Sign-In')">Sign in with Apple</button>
+        <p class="mt-4">New to LinkedIn? <a href="#">Join now</a></p>
+        <p id="error-message" class="text-danger mt-3"></p>
+    </div>
+    <script>
+        function validateLogin() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('error-message');
+            if (username === 'rroslansky@linkedin.com' && password === 'helloworld') {
+                window.location.href = 'page1.html';
+            } else {
+                errorMessage.textContent = 'Invalid username or password';
+            }
+        }
+    </script>
+</body>
+</html>
