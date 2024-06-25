@@ -1,0 +1,1 @@
+Write a function that checks if a number is even. The function should take an integer as input and return True if the number is even, and False otherwise.
